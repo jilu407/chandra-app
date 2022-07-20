@@ -1,0 +1,15 @@
+node {
+    stage('checkout scm ')
+    {
+        git url: 'https://github.com/jilu407/chandra-app.git'
+    }
+    stage('install')
+    {
+        sh 'npm install'
+    }
+    stage('build')
+    {
+        sh 'npm run build --prod'
+
+    }
+}
