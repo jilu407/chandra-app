@@ -12,6 +12,12 @@ pipeline{
 
             }
         }
+        stage('Deploy'){
+            steps{
+              sh 'cp -r /var/lib/jenkins/workspace/script-pipeline-angular/dist/chandra-app/* /usr/share/nginx/html/'
+              }
+              }
+              
     }
 
 }
