@@ -12,4 +12,8 @@ node {
         sh 'npm run build --prod'
 
     }
+    stage('Deploy'){
+            
+        sh 'cp -r /var/lib/jenkins/workspace/script-pipeline-angular/dist/chandra-app/* /usr/share/nginx/html/'
+      }
 }
